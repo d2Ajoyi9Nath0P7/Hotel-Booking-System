@@ -39,7 +39,7 @@ The system uses a relational database with 3 main tables:
    - Run the SQL queries (provided below) to create tables.
 4. **Run the Website:**
    - Open your browser and go to:
-     `http://localhost/bookingsystem/Home.php`
+     `http://localhost/HOTEL BOOKING SYSTEM/Home.php`
 
 ---
-**Developed by:** Ajoy Nath & [Team Member Name]
+**Developed by:** Ajoy Nath
