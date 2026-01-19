@@ -1,0 +1,214 @@
+/* ========================================
+   Register Page Styles - Airbnb Clone
+   ======================================== */
+
+/* Global Styles */
+body {
+    background-color: #F7F7F7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header with Logo */
+.header {
+    border-bottom: 1px solid #EBEBEB;
+    padding: 20px 0;
+    background: white;
+}
+
+.logo-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 32px;
+    height: 32px;
+}
+
+.logo-container h1 {
+    font-size: 20px;
+    color: #FF385C;
+    margin: 0;
+}
+
+.logo-container a {
+    color: #FF385C;
+    text-decoration: none;
+}
+
+.logo-container a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+.subtitle {
+    text-align: center;
+    color: #717171;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #222222;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF385C;
+}
+
+input::placeholder {
+    color: #AAAAAA;
+}
+
+/* Password strength indicator */
+input[type="password"]:focus {
+    border-color: #FF385C;
+}
+
+button {
+    padding: 14px;
+    background: #FF385C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #E31C5F;
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Links */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #717171;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #FF385C;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.back-home {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.back-home a {
+    color: #222222;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-home a:hover {
+    text-decoration: underline;
+}
+
+/* Error/Success Messages */
+.error-message,
+.success-message {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: none;
+}
+
+.error-message {
+    background: #FFE5E5;
+    color: #D00000;
+    border: 1px solid #FFCCCC;
+}
+
+.success-message {
+    background: #E5FFE5;
+    color: #00A000;
+    border: 1px solid #CCFFCC;
+}
+
+/* Terms and conditions */
+.terms {
+    font-size: 12px;
+    color: #717171;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.terms a {
+    color: #FF385C;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 40px 20px;
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .logo-container {
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - Car Rental System</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="../Home.php" class="logo">
+                <i class="fab fa-airbnb"></i>
+                <span>airbnb</span>
+            </a>
+        </div>
+        <div class="top-bar-center">
+            <span class="page-title">Admin Portal</span>
+        </div>
+        <div class="top-bar-right">
+            <a href="../Home.php" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Admin Portal Container -->
+    <div class="admin-container">
+        <div class="admin-card">
+            <div class="admin-header">
+                <div class="admin-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h1>Admin Portal</h1>
+                <p>Choose an option to access the admin panel</p>
+            </div>
+
+            <div class="portal-options">
+                <div class="option-card login-option">
+                    <div class="option-icon">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </div>
+                    <h3>Login</h3>
+                    <p>Access your existing admin account</p>
+                    <a href="admin-login.html" class="option-btn">
+                        <span>Login to Admin Panel</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                
+            </div>
+
+            <div class="admin-footer">
+                <div class="security-notice">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure admin access - All activities are monitored</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="background-elements">
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+            <div class="bg-shape shape-3"></div>
+        </div>
+    </div>
+
+    <script src="admin-portal.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[2026-01-06 07:02:18] login success: user=admin session=4ru7vn658cu4m25ovtq92lt640 cookies={"PHPSESSID":"i5iqlpqierfot2r5careltkmem"}
+Array
+(
+    [user_id] => 14
+    [user_name] => piu
+    [user_email] => piuiiuc@gmail.com
+    [logged_in] => 1
+    [admin_id] => 1
+    [admin_username] => admin
+)
+

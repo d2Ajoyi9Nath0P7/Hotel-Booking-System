@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citylights - Bashundhara Park Lane Luxe Collection</title>
+    <link rel="stylesheet" href="2ndPageStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="Home.php" class="logo">
+                <i class="fab fa-airbnb"></i>
+                <span>airbnb</span>
+            </a>
+        </div>
+        <div class="top-bar-center">
+            <button class="search-btn">
+                <div class="search-option">
+                    <span>Anywhere</span>
+                </div>
+                <div class="search-option">
+                    <span>Any week</span>
+                </div>
+                <div class="search-option with-guests">
+                    <span>Add guests</span>
+                    <i class="fas fa-search"></i>
+                </div>
+            </button>
+        </div>
+        <div class="top-bar-right">
+            <a href="#" class="host-link">Become a host</a>
+            <button class="globe-btn"><i class="fas fa-globe"></i></button>
+            <div class="profile-menu-container">
+
+                <button class="profile-btn">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-user-circle"></i>
+                </button>
+
+                <div class="profile-dropdown">
+                    <div class="dropdown-header">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="dropdown-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help Center</span>
+                    </div>
+
+                    <div class="dropdown-item">
+                        <i class="fas fa-home"></i>
+                        <span>Become a host</span>
+                        <p class="dropdown-desc">It's easy to start hosting and earn extra income.</p>
+                    </div>
+
+                    <div class="dropdown-item">
+                        <i class="fas fa-share-nodes"></i>
+                        <span>Refer a Host</span>
+                    </div>
+                    <div class="dropdown-item">
+                        <i class="fas fa-people-group"></i>
+                        <span>Find a co-host</span>
+                    </div>
+
+                    <div class="dropdown-divider">
+
+                    </div>
+
+                    <div class="dropdown-item">
+                        <i class="fas fa-gift"></i>
+                        <span>Gift cards</span>
+                    </div>
+                    <div class="dropdown-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-item" onclick="window.location.href='login.html' " style="cursor: pointer;">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Property Header -->
+        <div class="property-header">
+            <h1>Citylights - Bashundhara Park Lane Luxe Collection</h1>
+            <div class="header-actions">
+                <button class="header-btn"><i class="fas fa-share"></i> Share</button>
+                <button class="header-btn"><i class="far fa-heart"></i> Save</button>
+            </div>
+        </div>
+
+        <!-- Property Info -->
+        <div class="property-info">
+            <span class="rare-find">
+                <i class="fas fa-star"></i> Rare find! This place is usually booked
+            </span>
+            <div class="property-meta">
+                <span class="meta-item">Entire rental unit in Dhaka, Bangladesh</span>
+                <span class="meta-item">6 guests</span>
+                <span class="meta-item">3 bedrooms</span>
+                <span class="meta-item">3 baths</span>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Image Section -->
+                <div class="property-image">
+                    <img id="mainPropertyImg" src="" alt="Property Image">
+                </div>
+
+                <!-- Guest Favorite Section -->
+                <div class="guest-favorite">
+                    <div class="favorite-header">
+                        <i class="fas fa-medal"></i>
+                        <div>
+                            <h3>Guest favorite</h3>
+                            <p>One of the most loved homes on Airbnb, according to guests</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Host Info -->
+                <div class="host-section">
+                    <div class="host-info">
+                        <div class="host-avatar">CL</div>
+                        <div>
+                            <h3>Hosted by CityLights</h3>
+                            <p>3 years hosting</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Highlights -->
+                <div class="highlights">
+                    <h3>Listing highlights</h3>
+                    <div class="highlight-item">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <strong>Top 10% of homes</strong>
+                            <p>This home is highly ranked based on ratings, reviews, and reliability.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-key"></i>
+                        <div>
+                            <strong>Self check-in</strong>
+                            <p>You can check in with the building staff.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <strong>Free cancellation before February 5</strong>
+                            <p>Get a full refund if you change your mind.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="description">
+                    <p>Forget your worries in this spacious and serene space. A bright, stylish, and spacious 3-bedroom
+                        luxury apartment with free parking in Bashundhara F Block. This is conveniently located near the
+                        International Convention City Bashundhara (ICCB). Jamuna Future Park shopping centers and many
+                        cosmopolitan restaurants are within walking distance.</p>
+                    <p>You'll be staying in the upmarket Bashundhara Residential area. This apartment is suitable for
+                        families with kids from home or abroad or for business trips.</p>
+                </div>
+
+                <!-- Amenities -->
+                <div class="amenities-section">
+                    <h3>What this place offers</h3>
+                    <div class="amenities-grid">
+                        <div class="amenity"><i class="fas fa-utensils"></i> Kitchen</div>
+                        <div class="amenity"><i class="fas fa-wifi"></i> Wifi</div>
+                        <div class="amenity"><i class="fas fa-briefcase"></i> Dedicated workspace</div>
+                        <div class="amenity"><i class="fas fa-parking"></i> Free parking garage on premises</div>
+                        <div class="amenity"><i class="fas fa-tv"></i> TV</div>
+                        <div class="amenity"><i class="fas fa-elevator"></i> Elevator</div>
+                        <div class="amenity"><i class="fas fa-tshirt"></i> Washer</div>
+                        <div class="amenity"><i class="fas fa-snowflake"></i> Air conditioning</div>
+                        <div class="amenity"><i class="fas fa-umbrella-beach"></i> Patio or balcony</div>
+                        <div class="amenity"><i class="fas fa-suitcase-rolling"></i> Luggage dropoff allowed</div>
+                    </div>
+                    <button class="show-all-btn">Show all 52 amenities</button>
+                </div>
+
+                <!-- Calendar Section -->
+                <div class="calendar-section">
+                    <h3>2 nights in Dhaka</h3>
+                    <p>Feb 6, 2026 - Feb 8, 2026</p>
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                            <h4>February 2026</h4>
+                            <button class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="weekday">S</div>
+                            <div class="weekday">M</div>
+                            <div class="weekday">T</div>
+                            <div class="weekday">W</div>
+                            <div class="weekday">T</div>
+                            <div class="weekday">F</div>
+                            <div class="weekday">S</div>
+                            <!-- Days -->
+                            <div class="day">1</div>
+                            <div class="day">2</div>
+                            <div class="day">3</div>
+                            <div class="day">4</div>
+                            <div class="day">5</div>
+                            <div class="day">6</div>
+                            <div class="day">7</div>
+                            <div class="day">8</div>
+                            <div class="day">9</div>
+                            <div class="day">10</div>
+                            <div class="day">11</div>
+                            <div class="day">12</div>
+                            <div class="day">13</div>
+                            <div class="day">14</div>
+                            <div class="day">15</div>
+                            <div class="day">16</div>
+                            <div class="day">17</div>
+                            <div class="day">18</div>
+                            <div class="day">19</div>
+                            <div class="day">20</div>
+                            <div class="day">21</div>
+                            <div class="day">22</div>
+                            <div class="day">23</div>
+                            <div class="day">24</div>
+                            <div class="day">25</div>
+                            <div class="day">26</div>
+                            <div class="day">27</div>
+                            <div class="day">28</div>
+                            <div class="day">29</div>
+                            <div class="day">30</div>
+                            <div class="day">31</div>
+                        </div>
+                        <div class="calendar-month">March 2026</div>
+                        <div class="calendar-grid">
+                            <div class="weekday">S</div>
+                            <div class="weekday">M</div>
+                            <div class="weekday">T</div>
+                            <div class="weekday">W</div>
+                            <div class="weekday">T</div>
+                            <div class="weekday">F</div>
+                            <div class="weekday">S</div>
+                            <!-- March Days -->
+                            <div class="day other-month">1</div>
+                            <div class="day other-month">2</div>
+                            <div class="day other-month">3</div>
+                            <div class="day other-month">4</div>
+                            <div class="day other-month">5</div>
+                            <div class="day other-month">6</div>
+                            <div class="day other-month">7</div>
+                        </div>
+                    </div>
+                    <button class="clear-dates-btn">Clear dates</button>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="reviews-section">
+                    <div class="reviews-header">
+                        <div class="rating-overall">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating">5.0</span>
+                            <span class="reviews-count">· 13 reviews</span>
+                        </div>
+                        <div class="guest-favorite-badge">
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <strong>Guest favorite</strong>
+                                <p>This home is in the top 10% of eligible listings based on ratings, reviews, and
+                                    reliability</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rating-categories">
+                        <div class="rating-category">
+                            <span>Overall rating</span>
+                            <div class="rating-bar">
+                                <div class="bar-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="rating-score">5.0</span>
+                        </div>
+                        <div class="rating-category">
+                            <span>Cleanliness</span>
+                            <div class="rating-bar">
+                                <div class="bar-fill" style="width: 98%"></div>
+                            </div>
+                            <span class="rating-score">4.9</span>
+                        </div>
+                        <div class="rating-category">
+                            <span>Accuracy</span>
+                            <div class="rating-bar">
+                                <div class="bar-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="rating-score">5.0</span>
+                        </div>
+                        <div class="rating-category">
+                            <span>Check-in</span>
+                            <div class="rating-bar">
+                                <div class="bar-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="rating-score">5.0</span>
+                        </div>
+                        <div class="rating-category">
+                            <span>Communication</span>
+                            <div class="rating-bar">
+                                <div class="bar-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="rating-score">5.0</span>
+                        </div>
+                        <div class="rating-category">
+                            <span>Location</span>
+                            <div class="rating-bar">
+                                <div class="bar-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="rating-score">5.0</span>
+                        </div>
+                        <div class="rating-category">
+                            <span>Value</span>
+                            <div class="rating-bar">
+                                <div class="bar-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="rating-score">5.0</span>
+                        </div>
+                    </div>
+
+                    <!-- Individual Reviews -->
+                    <div class="individual-reviews">
+                        <div class="review">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">S</div>
+                                <div>
+                                    <h4>Sumon</h4>
+                                    <p>Vancouver, Canada</p>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <div class="review-meta">
+                                    <span class="stars">★★★★★</span>
+                                    <span>· 1 week ago · Stayed a few nights</span>
+                                </div>
+                                <p>Beautiful apartment. Very spacious and airy. In Dhaka, that is hard to find.
+                                    Everything you need is already there. We didn't have to ask for anything...</p>
+                                <button class="show-more">Show more</button>
+                            </div>
+                        </div>
+
+                        <div class="review">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">R</div>
+                                <div>
+                                    <h4>Ruma</h4>
+                                    <p>New to Airbnb</p>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <div class="review-meta">
+                                    <span class="stars">★★★★★</span>
+                                    <span>· 2 weeks ago · Stayed a few nights</span>
+                                </div>
+                                <p>The property was absolutely beautiful and clean. It was exactly like the description.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="review">
+                            <div class="reviewer">
+                                <div class="reviewer-avatar">M</div>
+                                <div>
+                                    <h4>Merina</h4>
+                                    <p>Edmonton, Canada</p>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <div class="review-meta">
+                                    <span class="stars">★★★★★</span>
+                                    <span>· 2 weeks ago · Stayed a few nights</span>
+                                </div>
+                                <p>Good Experience</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="show-all-reviews">Show all 13 reviews</button>
+                </div>
+
+                <!-- Location Section -->
+                <div class="location-section">
+                    <h3>Where you'll be</h3>
+                    <p>Dhaka, Dhaka Division, Bangladesh</p>
+                    <div class="map-placeholder">
+                        <div id="map" class="map"></div>
+                    </div>
+                </div>
+
+                <!-- Host Details -->
+                <div class="host-details-section">
+                    <div class="host-profile">
+                        <div class="host-profile-left">
+                            <div class="host-main">
+                                <div class="host-avatar-large">CL</div>
+                                <div>
+                                    <h3>Meet your host</h3>
+                                    <div class="host-stats">
+                                        <div class="host-stat">
+                                            <strong>130</strong>
+                                            <span>Reviews</span>
+                                        </div>
+                                        <div class="host-stat">
+                                            <strong>4.77</strong>
+                                            <span>Rating</span>
+                                        </div>
+                                        <div class="host-stat">
+                                            <strong>3</strong>
+                                            <span>Years hosting</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>We are CityLights BD. We are passionate about providing a great experience for our
+                                guests. We take great pride in our Airbnb and strive to provide a clean, comfortable,
+                                and welcoming atmosphere for all our guests. We are always eager to help and provide the
+                                best hospitality we can. We are sure you'll have an amazing stay and we are looking
+                                forward to making your experience a memorable one. Thank you for considering us as your
+                                Airbnb host!</p>
+                        </div>
+                        <div class="host-profile-right">
+                            <button class="message-host">Message host</button>
+                            <div class="co-hosts">
+                                <p><strong>Co-hosts</strong></p>
+                                <div class="co-host-avatars">
+                                    <div class="co-host-avatar">R</div>
+                                    <div class="co-host-avatar">T</div>
+                                </div>
+                                <p>Response rate: 100%</p>
+                                <p>Responds within an hour</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Things to Know -->
+                <div class="things-to-know">
+                    <h3>Things to know</h3>
+                    <div class="things-grid">
+                        <div class="thing-category">
+                            <h4>Cancellation policy</h4>
+                            <p>Free cancellation before February 5. Cancel before check-in on February 6 for a partial
+                                refund.</p>
+                            <button class="learn-more">Review this host's full policy for details.</button>
+                        </div>
+                        <div class="thing-category">
+                            <h4>House rules</h4>
+                            <p>Check-in after 2:00 PM</p>
+                            <p>Checkout before 11:00 AM</p>
+                            <p>6 guests maximum</p>
+                            <button class="learn-more">Learn more</button>
+                        </div>
+                        <div class="thing-category">
+                            <h4>Safety & property</h4>
+                            <p>Carbon monoxide alarm</p>
+                            <p>Smoke alarm</p>
+                            <button class="learn-more">Learn more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Navigation -->
+                <div class="footer-nav">
+                    <div class="breadcrumb">
+                        <a href="#">Airbnb</a> &gt;
+                        <a href="#">Bangladesh</a> &gt;
+                        <a href="#">Dhaka</a> &gt;
+                        <a href="#">Dhaka District</a> &gt;
+                        <a href="#">Dhaka</a>
+                    </div>
+
+                    <div class="explore-section">
+                        <h4>Explore other options in and around Dhaka</h4>
+                        <div class="explore-grid">
+                            <div class="explore-item">
+                                <strong>Kolkata</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                            <div class="explore-item">
+                                <strong>Guwahati</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                            <div class="explore-item">
+                                <strong>Darjeeling</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                            <div class="explore-item">
+                                <strong>Shillong</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                            <div class="explore-item">
+                                <strong>North 24 Parganas</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                            <div class="explore-item">
+                                <strong>Gangtok</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                            <div class="explore-item">
+                                <strong>Siliguri</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                            <div class="explore-item">
+                                <strong>Kamrup</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                            <div class="explore-item">
+                                <strong>Sylhet</strong>
+                                <p>Vacation rentals</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="other-stays">
+                        <h4>Other types of stays on Airbnb</h4>
+                        <div class="stays-grid">
+                            <div class="stay-item">Dhaka vacation rentals</div>
+                            <div class="stay-item">Dhaka monthly stays</div>
+                            <div class="stay-item">Family-friendly vacation rentals in Dhaka</div>
+                            <div class="stay-item">Apartment vacation rentals in Dhaka District</div>
+                            <div class="stay-item">Family-friendly vacation rentals in Dhaka District</div>
+                            <div class="stay-item">Apartment vacation rentals in Dhaka</div>
+                            <div class="stay-item">Family-friendly vacation rentals in Dhaka</div>
+                            <div class="stay-item">Family-friendly vacation rentals in Bangladesh</div>
+                            <div class="stay-item">Apartment vacation rentals in Bangladesh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Booking Widget -->
+            <div class="right-column">
+                <div class="booking-widget">
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="original-price">$110</span>
+                            <span class="current-price">$97</span>
+                            <span class="price-note">for 2 nights</span>
+                        </div>
+                        <div class="rating-badge">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating">5.0</span>
+                            <span class="reviews">· 13 reviews</span>
+                        </div>
+                    </div>
+
+                <div class="date-selection">
+                        <div class="date-input">
+                            <label for="checkInInput">CHECK-IN</label>
+                            <input type="date" id="checkInInput">
+                        </div>
+
+                        <div class="date-input">
+                            <label for="checkOutInput">CHECKOUT</label>
+                            <input type="date" id="checkOutInput">
+                        </div>
+                </div>
+
+
+                    <div class="guests-selection">
+                        <label>GUESTS</label>
+                        <div class="guests-input">
+                            <span>1 guest</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <button class="reserve-btn">
+                        <span class="reserve-text">Reserve</span>
+                    </button>
+
+                    <p class="price-note">You won't be charged yet</p>
+
+                    <div class="price-breakdown">
+                        <div class="price-item">
+                            <span id="basePriceLabel">$0 x 0 nights</span>
+                            <span id="baseTotalPrice">$0</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Cleaning fee</span>
+                            <span id="cleaningFeeDisplay">$20</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Airbnb service fee</span>
+                            <span id="serviceFeeDisplay">$26</span>
+                        </div>
+                        <div class="price-item total">
+                            <span>Total</span>
+                            <span id="grandTotalPrice">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="report-listing">
+                        <button class="report-btn">
+                            <i class="far fa-flag"></i> Report this listing
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Get help with a safety issue</a></li>
+                    <li><a href="#">AirCover</a></li>
+                    <li><a href="#">Travel insurance</a></li>
+                    <li><a href="#">Anti-discrimination</a></li>
+                    <li><a href="#">Disability support</a></li>
+                    <li><a href="#">Cancellation options</a></li>
+                    <li><a href="#">Report neighborhood concern</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Hosting</h4>
+                <ul>
+                    <li><a href="#">Airbnb your home</a></li>
+                    <li><a href="#">Airbnb your experience</a></li>
+                    <li><a href="#">Airbnb your service</a></li>
+                    <li><a href="#">AirCover for Hosts</a></li>
+                    <li><a href="#">Hosting resources</a></li>
+                    <li><a href="#">Community forum</a></li>
+                    <li><a href="#">Hosting responsibly</a></li>
+                    <li><a href="#">Airbnb-friendly apartments</a></li>
+                    <li><a href="#">Join a free Hosting class</a></li>
+                    <li><a href="#">Find a co-host</a></li>
+                    <li><a href="#">Refer a host</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Airbnb</h4>
+                <ul>
+                    <li><a href="#">2025 Summer Release</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Airbnb.org emergency stays</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-left">
+                <p>© 2025 Airbnb, Inc. · Privacy · Terms · Your Privacy Choices</p>
+            </div>
+            <div class="footer-right">
+                <button class="language-btn">
+                    <i class="fas fa-globe"></i> English (US)
+                </button>
+                <button class="currency-btn">
+                    <i class="fas fa-dollar-sign"></i> USD
+                </button>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Become a Host Modal -->
+    <div class="modal-overlay" id="hostModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>What would you like to host?</h2>
+            <div class="host-options">
+                <div class="host-option">
+                    <div class="option-icon">🏠</div>
+                    <h3>Home</h3>
+                </div>
+                <div class="host-option">
+                    <div class="option-icon">�</div>
+                    <h3>Experience</h3>
+                </div>
+                <div class="host-option">
+                    <div class="option-icon">🔔</div>
+                    <h3>Service</h3>
+                </div>
+            </div>
+            <button class="modal-next-btn">Next</button>
+        </div>
+    </div>
+
+    <!-- Search Modals -->
+    <!-- Where Modal -->
+    <div class="modal-overlay" id="whereModal">
+        <div class="modal-content search-modal">
+            <button class="modal-close">&times;</button>
+            <h2>Where are you going?</h2>
+            <input type="text" class="search-input" placeholder="Search destinations">
+            <div class="search-suggestions">
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">📍</div>
+                    <div>
+                        <h4>Nearby</h4>
+                        <p>Find what's around you</p>
+                    </div>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">🏢</div>
+                    <div>
+                        <h4>Toronto, Canada</h4>
+                        <p>For sights like CN Tower</p>
+                    </div>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">🌲</div>
+                    <div>
+                        <h4>Calgary, Canada</h4>
+                        <p>For nature-lovers</p>
+                    </div>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">🏠</div>
+                    <div>
+                        <h4>Saskatoon, Canada</h4>
+                        <p>For a trip abroad</p>
+                    </div>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">🍽️</div>
+                    <div>
+                        <h4>Vancouver, Canada</h4>
+                        <p>For its top-notch dining</p>
+                    </div>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">🛕</div>
+                    <div>
+                        <h4>Kolkata, India</h4>
+                        <p>For sights like Victoria Memorial</p>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-next-btn">Next</button>
+        </div>
+    </div>
+
+    <!-- When Modal -->
+    <div class="modal-overlay" id="whenModal">
+        <div class="modal-content search-modal">
+            <button class="modal-close">&times;</button>
+            <h2>When are you going?</h2>
+            <div class="date-tabs">
+                <button class="date-tab active">Dates</button>
+                <button class="date-tab">Months</button>
+                <button class="date-tab">Flexible</button>
+            </div>
+            <div class="mini-calendar">
+                <div class="calendar-months">
+                    <div class="single-month">
+                        <div class="calendar-month-header">December 2025</div>
+                        <div class="mini-calendar-grid">
+                            <div class="cal-day">S</div>
+                            <div class="cal-day">M</div>
+                            <div class="cal-day">T</div>
+                            <div class="cal-day">W</div>
+                            <div class="cal-day">T</div>
+                            <div class="cal-day">F</div>
+                            <div class="cal-day">S</div>
+                            <div class="cal-date">1</div>
+                            <div class="cal-date">2</div>
+                            <div class="cal-date">3</div>
+                            <div class="cal-date">4</div>
+                            <div class="cal-date">5</div>
+                            <div class="cal-date">6</div>
+                            <div class="cal-date">7</div>
+                            <div class="cal-date">8</div>
+                            <div class="cal-date">9</div>
+                            <div class="cal-date">10</div>
+                            <div class="cal-date">11</div>
+                            <div class="cal-date">12</div>
+                            <div class="cal-date">13</div>
+                            <div class="cal-date">14</div>
+                            <div class="cal-date">15</div>
+                            <div class="cal-date">16</div>
+                            <div class="cal-date">17</div>
+                            <div class="cal-date">18</div>
+                            <div class="cal-date">19</div>
+                            <div class="cal-date">20</div>
+                            <div class="cal-date">21</div>
+                            <div class="cal-date">22</div>
+                            <div class="cal-date">23</div>
+                            <div class="cal-date">24</div>
+                            <div class="cal-date">25</div>
+                            <div class="cal-date">26</div>
+                            <div class="cal-date">27</div>
+                            <div class="cal-date">28</div>
+                            <div class="cal-date">29</div>
+                            <div class="cal-date">30</div>
+                            <div class="cal-date">31</div>
+                        </div>
+                    </div>
+                    <div class="single-month">
+                        <div class="calendar-month-header">January 2026</div>
+                        <div class="mini-calendar-grid">
+                            <div class="cal-day">S</div>
+                            <div class="cal-day">M</div>
+                            <div class="cal-day">T</div>
+                            <div class="cal-day">W</div>
+                            <div class="cal-day">T</div>
+                            <div class="cal-day">F</div>
+                            <div class="cal-day">S</div>
+                            <div class="cal-date">1</div>
+                            <div class="cal-date">2</div>
+                            <div class="cal-date">3</div>
+                            <div class="cal-date">4</div>
+                            <div class="cal-date">5</div>
+                            <div class="cal-date">6</div>
+                            <div class="cal-date">7</div>
+                            <div class="cal-date">8</div>
+                            <div class="cal-date">9</div>
+                            <div class="cal-date">10</div>
+                            <div class="cal-date">11</div>
+                            <div class="cal-date">12</div>
+                            <div class="cal-date">13</div>
+                            <div class="cal-date">14</div>
+                            <div class="cal-date">15</div>
+                            <div class="cal-date">16</div>
+                            <div class="cal-date">17</div>
+                            <div class="cal-date">18</div>
+                            <div class="cal-date">19</div>
+                            <div class="cal-date">20</div>
+                            <div class="cal-date">21</div>
+                            <div class="cal-date">22</div>
+                            <div class="cal-date">23</div>
+                            <div class="cal-date">24</div>
+                            <div class="cal-date">25</div>
+                            <div class="cal-date">26</div>
+                            <div class="cal-date">27</div>
+                            <div class="cal-date">28</div>
+                            <div class="cal-date">29</div>
+                            <div class="cal-date">30</div>
+                            <div class="cal-date">31</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-next-btn">Next</button>
+        </div>
+    </div>
+
+    <!-- Guests Modal -->
+    <div class="modal-overlay" id="guestsModal">
+        <div class="modal-content search-modal">
+            <button class="modal-close">&times;</button>
+            <h2>Who's coming?</h2>
+            <div class="guests-options">
+                <div class="guest-row">
+                    <div>
+                        <h4>Adults</h4>
+                        <p>Ages 13 or above</p>
+                    </div>
+                    <div class="guest-counter">
+                        <button class="counter-btn">−</button>
+                        <span class="counter-value">0</span>
+                        <button class="counter-btn">+</button>
+                    </div>
+                </div>
+                <div class="guest-row">
+                    <div>
+                        <h4>Children</h4>
+                        <p>Ages 2–12</p>
+                    </div>
+                    <div class="guest-counter">
+                        <button class="counter-btn">−</button>
+                        <span class="counter-value">0</span>
+                        <button class="counter-btn">+</button>
+                    </div>
+                </div>
+                <div class="guest-row">
+                    <div>
+                        <h4>Infants</h4>
+                        <p>Under 2</p>
+                    </div>
+                    <div class="guest-counter">
+                        <button class="counter-btn">−</button>
+                        <span class="counter-value">0</span>
+                        <button class="counter-btn">+</button>
+                    </div>
+                </div>
+                <div class="guest-row">
+                    <div>
+                        <h4>Pets</h4>
+                        <p>Bringing a service animal?</p>
+                    </div>
+                    <div class="guest-counter">
+                        <button class="counter-btn">−</button>
+                        <span class="counter-value">0</span>
+                        <button class="counter-btn">+</button>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-next-btn">Next</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // URL থেকে ডাটা রিসিভ করা
+            const params = new URLSearchParams(window.location.search);
+            const imgPath = params.get('img');
+
+            // যদি ইমেজ লিঙ্ক পাওয়া যায়, তবে সেটি বসিয়ে দাও
+            if (imgPath) {
+                const displayImg = document.getElementById('mainPropertyImg');
+                if (displayImg) {
+                    displayImg.src = decodeURIComponent(imgPath);
+                }
+            }
+
+            // 🔧 Reserve button click: require registration before proceeding
+            // The registration page should set: localStorage.setItem('isRegistered', 'true') upon successful registration
+            const reserveBtn = document.querySelector('.reserve-btn');
+            if (reserveBtn) {
+                reserveBtn.addEventListener('click', function (e) {
+                    const isRegistered = localStorage.getItem('isRegistered') === 'true';
+                    if (!isRegistered) {
+                        e.preventDefault();
+                        if (confirm('You must register before reserving. Go to the registration page now?')) {
+                            window.location.href = 'register.html';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="2nPageScript.js"></script>
+</body>
+
+</html>

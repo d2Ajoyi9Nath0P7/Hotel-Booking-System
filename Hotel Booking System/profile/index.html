@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Airbnb</title>
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="../Home.html" class="logo">
+                    <i class="fab fa-airbnb"></i>
+                    <span>airbnb</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-link">Become a host</a>
+                <button class="globe-btn"><i class="fas fa-globe"></i></button>
+                <div class="profile-menu">
+                    <button class="menu-btn" id="menuBtn">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <div class="dropdown-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Wishlists</span>
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="fas fa-suitcase"></i>
+                            <span>Trips</span>
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Messages</span>
+                        </div>
+                        <div class="dropdown-item active">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </div>
+                        <hr>
+                        <div class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Account settings</span>
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Languages & currency</span>
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help Center</span>
+                        </div>
+                        <hr>
+                        <div class="dropdown-item">
+                            <i class="fas fa-home"></i>
+                            <span>Become a host</span>
+                        </div>
+                        <hr>
+                        <div class="dropdown-item logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Log out</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="profile-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-header">
+                <div class="profile-avatar">M</div>
+                <p>Guest</p>
+            </div>
+
+            <nav class="sidebar-menu">
+                <button class="menu-item active" data-tab="about">
+                    <i class="fas fa-user"></i>
+                    <span>About me</span>
+                </button>
+                <button class="menu-item" data-tab="trips">
+                    <i class="fas fa-suitcase"></i>
+                    <span>Past trips</span>
+                </button>
+                <button class="menu-item" data-tab="connections">
+                    <i class="fas fa-handshake"></i>
+                    <span>Connections</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="profile-content">
+            <!-- About Me Tab -->
+            <section id="about" class="tab-content active">
+                <div class="content-header">
+                    <h1>About me</h1>
+                    <button class="edit-btn">Edit</button>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-info">
+                        <div class="profile-pic-large">M</div>
+                        <div class="profile-details">
+                            <h2>Md</h2>
+                            <p class="user-type">Guest</p>
+                        </div>
+                    </div>
+                    <div class="complete-profile-prompt">
+                        <h3>Complete your profile</h3>
+                        <p>Your Airbnb profile is an important part of every reservation. Complete yours to help other hosts and guests get to know you.</p>
+                        <button class="cta-btn">Get started</button>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Reviews I've written</h3>
+                    <div class="empty-state">
+                        <i class="fas fa-star"></i>
+                        <p>You haven't written any reviews yet</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Past Trips Tab -->
+            <section id="trips" class="tab-content">
+                <div class="content-header">
+                    <h1>Past trips</h1>
+                </div>
+
+                <div class="empty-state-large">
+                    <div class="suitcase-icon">
+                        <i class="fas fa-suitcase"></i>
+                    </div>
+                    <p class="empty-message">You'll find your past reservations here after you've taken your first trip on Airbnb.</p>
+                    <button class="cta-btn">Book a trip</button>
+                </div>
+            </section>
+
+            <!-- Connections Tab -->
+            <section id="connections" class="tab-content">
+                <div class="content-header">
+                    <h1>Connections</h1>
+                </div>
+
+                <div class="empty-state-large">
+                    <div class="connections-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <p class="empty-message">When you join an experience or invite someone on a trip, you'll find the profiles of other guests here. Learn more</p>
+                    <button class="cta-btn">Book a trip</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Get help with a safety issue</a></li>
+                    <li><a href="#">AirCover</a></li>
+                    <li><a href="#">Travel insurance</a></li>
+                    <li><a href="#">Anti-discrimination</a></li>
+                    <li><a href="#">Disability support</a></li>
+                    <li><a href="#">Cancellation options</a></li>
+                    <li><a href="#">Report neighborhood concern</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Hosting</h4>
+                <ul>
+                    <li><a href="#">Airbnb your home</a></li>
+                    <li><a href="#">AirCover for Hosts</a></li>
+                    <li><a href="#">Hosting resources</a></li>
+                    <li><a href="#">Community forum</a></li>
+                    <li><a href="#">Hosting responsibly</a></li>
+                    <li><a href="#">Airbnb-friendly apartments</a></li>
+                    <li><a href="#">Join a free Hosting class</a></li>
+                    <li><a href="#">Find a co-host</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Airbnb</h4>
+                <ul>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">New features</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Airbnb.org emergency stays</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Airbnb, Inc. · Privacy · Terms · Sitemap</p>
+            <div class="footer-right">
+                <button class="footer-btn">English (US)</button>
+                <button class="footer-btn">$ USD</button>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
